@@ -53,17 +53,17 @@
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>In this experiment, I was trying to make interesting, tile-based, procedural worlds. This one is the Overland version, and I was trying to make some meadows with sparse trees and some houses sprinkled in.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>The main terrain is made using noise. If it's over 0.6, it's trees, and if it's over 0.5 and below, it's 0.6, it's trees. Otherwise, it's water. The houses spawn instead of trees a small percentage of the time. For the smoke, every time the terrain is updated, house tiles create a particle system on top of themselves. These are deleted on updates, too. Particle systems spawn particles every n frame and slowly grow, fade out, and rise. They also have a random number added to their x coordinate each frame to spread them out. I set the random seed to millis() when doing this so that no weird behaviors emerge. I also automatically change the size of the screen. Instead of making tiles 16 by 16, I changed them to be an n by n tile where n is the floor integer to the value that would perfectly fill the screen. I also change the canvas size to account for this. I do this so that images don't have weird artifacts around their edges from being drawn on decimal coordinates (meaning they are split between pixels).</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>I was happy with the outcome of this assignment. One thing I learned is that the simple way we were supposed to do the automated tile setting wasn't capable of reproducing the examples. I think in order to do that you would need to either do a lot of work setting up the logic for that manually or use waveform collapse. This is because you need to check diagonals in order to get the edges/corners of ponds and grasses working properly, which has 256 different states. With waveform collapse, you could build an example world and then automate the creation of the lookup table. I’ve always wanted to use that algorithm and I hope we look into it in this class.</p>
 			</div>
 
 		</section>

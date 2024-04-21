@@ -53,17 +53,17 @@
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>In this experiment, I was trying to make interesting, tile-based, procedural worlds. This one is the Dungeon version, and I was trying to make some simple rooms connected by passageways with occasional chests.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>I generate the rooms by using an array of rooms I have already made. I loop a hundred times, trying to add rooms at different points on the level but only using the ones that don't intersect with the ones already created. I then check if the edges of any of the rooms are both aligned and within a certain distance. If they are, then I make a random path between them. I spawn chests on the floor tiles a small percentage of the time. I allow the player to move a character around inside the dungeon. When you press a key to move, it checks whether that time exists and is navigable and moves the character if it does. The player also only spawns on tiles it can walk on. The program chooses a random point and spawns the player on the closest tile it can spawn on to that point. I also automatically change the size of the screen. Instead of making tiles 16 by 16, I changed them to be an n by n tile where n is the floor integer to the value that would perfectly fill the screen. I also change the canvas size to account for this. I do this so that images don't have weird artifacts around their edges from being drawn on decimal coordinates (meaning they are split between pixels).</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>I was happy with the outcome of this assignment. One thing I learned is that the simple way we were supposed to do the automated tile setting wasn't capable of reproducing the examples. I think in order to do that you would need to either do a lot of work setting up the logic for that manually or use waveform collapse. This is because you need to check diagonals in order to get the edges/corners of ponds and grasses working properly, which has 256 different states. With waveform collapse, you could build an example world and then automate the creation of the lookup table. I’ve always wanted to use that algorithm and I hope we look into it in this class.</p>
 			</div>
 
 		</section>
