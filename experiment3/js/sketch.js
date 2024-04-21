@@ -405,9 +405,9 @@ var multS = 0;
 var shiftS = 0;
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-  //if(mouseIsPressed){
-  //  fullscreen(true);
-  //}
+  if(mouseIsPressed){
+    fullscreen(true);
+  }
   //push();
 
   if(fullscreen() !== bFullScreen){
