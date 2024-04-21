@@ -21,7 +21,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
 
 	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
-    <script type="text/javascript" src="../js/site.js" DEFER></script>
+    <!-- <script type="text/javascript" src="../js/site.js" DEFER></script> -->
 	<!-- Use me for a JavaScript OOP Project -->
 	<script type="text/javascript" src="./js/project.js" DEFER></script>
 	<!-- Use me for a p5.js project -->
@@ -35,8 +35,16 @@
 			<h1>Experiment X - Subject/Topic</h1>
 
 			<div class="minor-section">
-				<div id="canvas-container">
 					<!-- canvas will be added here -->
+					<button id="reseedButton">
+						reseed
+					  </button>
+					  <span id="seedReport"></span>
+					  <hr />
+					<div id="canvas-container">
+					<!-- canvas will be added here -->
+					</div>
+					  <textarea cols="20" rows="20" id="asciiBox" style="opacity: 0.5; letter-spacing: 1ex; width: 320px; margin: 10px; font-family: monospace;"></textarea>
 				</div>
                 <div class="fullscreen-box">
                     <button id="fullscreen">Fullscreen</button>
