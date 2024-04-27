@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 04: Infinite Worlds</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -33,7 +33,7 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 04: Infinite Worlds</h1>
 
 			<div class="minor-section">
 					<div id="canvas-container1" class="p5Canvas">
@@ -50,17 +50,17 @@
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>In this experiment, I was trying to make infinite, generative worlds.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>All three sketches use the same global seed. The location of the camera is also global, so the three sketches show the exact same scene but at different times of the year. Each tree rotates around its base using summed noise functions based on millis(). I give them a slow, wide sway; then I add a smaller, faster sway on top of that. The positioning of the tiles also uses noise. I use linear noise functions to get a value for each tile, then I choose what to draw on that tile based on what the value is. For example, if the value is low enough, I draw water. Each grass tile has a chance to spawn a tree, I use the hashing function given to use to do that. The textures of each tile are stored in images using createGraphics, just like the trees. I create multiple variations to break up the texture. For all of the tile textures, I draw an array of points on them, each with a different color. For grass, I extend the points upward a random amount. I also separated the top and bottom to make the trees fit in properly. For Dirt, I make each point a randomly shaped ellipse to make it look lumpy. For water, I use horizontally stretched, layered noise for the base. I then add a random value on top of that to break it up and remove seams. I then just change the colors based on the season. Dirt has some snow added to it using noise for winter, and the darker water zone is removed for ice.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>I really like the final product of this experiment. I’ve been really wanting to do something with the tree generator I made and I like how they fit into this project. The hardest part was trying to put the project into my website because of the engine code and because of how I wanted to do it. Something I could have done if I had more time was add more things to the world. having random houses or a player could make the world more interesting. If this was made into a game, time travel aspects could be really cool.</p>
 			</div>
 
 		</section>
