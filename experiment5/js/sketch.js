@@ -9,9 +9,17 @@ let currentInspiration;
 let currentCanvas;
 let currentInspirationPixels;
 function preload() {
-  
+  //let img = document.createElement("img");
+  //img.src = "https://lazoo.org/wp-content/uploads/2020/02/Gecko-Giant-Day-2.jpg";
+  //img.width = width;
+  //img.height = height;
+  //ImageTop.appendChild(img);
+
 
   let allInspirations = getInspirations();
+
+  let img = document.getElementById("TopImage");
+  img.src = "https://cdn.glitch.global/3abd0223-86fb-43ce-a00a-fde12615bcd5/lunch-on-a-skyscraper.jpg?v=1714798266994";
 
   for (let i = 0; i < allInspirations.length; i++) {
     let insp = allInspirations[i];
@@ -32,6 +40,8 @@ function inspirationChanged(nextInspiration) {
   currentInspiration = nextInspiration;
   currentDesign = undefined;
   memory.innerHTML = "";
+  let img = document.getElementById("TopImage");
+  img.src = currentInspiration.assetUrl;
   setup();
 }
 
@@ -78,7 +88,7 @@ function memorialize() {
 
   memory.insertBefore(img, memory.firstChild);
 
-  if (memory.childNodes.length > 3) {
+  if (memory.childNodes.length > memory.dataset.maxItems) {
     memory.removeChild(memory.lastChild);
   }
 }
