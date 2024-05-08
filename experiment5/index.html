@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 05: Evolutionary Impressions</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <!-- <script type="text/javascript" src="../js/site.js" DEFER></script> -->
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/my_design.js" DEFER></script>
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 05: Evolutionary Impressions</h1>
+
+			<div class="minor-section">
+					<!-- canvas will be added here -->
+					<select id="dropper"></select>
+					<button id="restart">
+					  restart
+					</button>
+					<p>
+					  Mutation rate (<span id="rate"></span>%):<br /><input
+						id="slider"
+						type="range"
+						min="1"
+						max="100"
+						value="7"
+					  />
+					</p>
+					<p>
+					  Color Mutation rate (<span id="rate2"></span>%):<br /><input
+						id="slider2"
+						type="range"
+						min="0"
+						max="100"
+						value="18"
+					  />
+					</p>
+					<p>
+					  Mutation Speed rate (<span id="rate3"></span>%):<br /><input
+						id="slider3"
+						type="range"
+						min="0"
+						max="100"
+						value="18"
+					  />
+					</p>
+					<p id="active"></p>
+					<p>Active score: <span id="activeScore"></span></p>
+					<p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+					<p>LearningRate rate: <span id="LearningCounter"></span> </p>
+					<p id="best"></p>
+					<p>Best score: <span id="bestScore"></span></p>
+					<p id="memory" data-max-items="16"></p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>For this experiment, the goal was to create an evolutional system that converges on an image. I was trying to get a very detailed final output with color.</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>This one was pretty simple. I changed the p5 version that was running because the default was much slower than more recent versions. I copy pasted the code for the slider bars and made two new ones. I am just creating 1000 rectangles and mutating their position, color, and alpha. I am also using one of the sliders to determine how many mutations to make. I am using randomGaussian for mutations.</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>I feel like I’m over all really happy with how it turned out, but it could use some tuning. It still takes a really long time to get to a reasonable image. I do really like how good the final products look though. If I redid it, I would probably scrap the premade code and write it myself. It seems really slow and I could have more flexibility if I didn't use it. I could also try to do something with shaders to make it really fast. Another thing I would do is come up with a better algorithm for mutating things. It currently just does it randomly but there are algorithms that try and do more of good mutations. Overall I tuned mine for really good final images and I think I succeeded.</p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
