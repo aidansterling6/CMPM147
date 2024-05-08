@@ -42,6 +42,7 @@ function inspirationChanged(nextInspiration) {
   memory.innerHTML = "";
   let img = document.getElementById("TopImage");
   img.src = currentInspiration.assetUrl;
+  console.log(currentInspiration.assetUrl);
   setup();
 }
 
